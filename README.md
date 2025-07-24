@@ -94,18 +94,23 @@ Each router maintains:
 
 ## Project Structure
 
-/
-│
+```
+TA-OSPF-Project/
 ├── src/
-│ ├── OSPFRouter.h # Router module header
-│ ├── OSPFRouter.cc # Router module implementation
-│ └── OSPFPacket.msg # Custom packet format (TA-OSPF)
+│   ├── OSPFRouter.h         # Router module header
+│   ├── OSPFRouter.cc        # Router module implementation
+│   └── OSPFPacket.msg       # Custom packet format (TA-OSPF)
 │
 ├── simulations/
-│ └── OSPFNetwork.ned # Simulated network topology
+│   └── OSPFNetwork.ned      # Simulated network topology
 │
-├── README.md # This documentation
-└── ... (Other OMNeT++ project files)
+├── images/                  # Visualization images (e.g., routing paths)
+│   ├── standard_ospf_r1_r7.png
+│   └── ta_ospf_r1_r7.png
+│
+├── README.md                # Project documentation
+└── ...                      # Other OMNeT++ project files and configs
+```
 
 
 ## How to Run the Simulation
@@ -142,14 +147,14 @@ To illustrate the benefits of TA-OSPF, we compare typical packet paths from rout
 
 *(Assuming a scenario where the "shortest path" for standard OSPF becomes congested)*
 
-![Standard OSPF Routing from R1 to R7](images/standard_ospf_r1_r7.png)
+![Standard OSPF Routing from R1 to R7](Images/standard_ospf_r1_r7.png)
 *Figure 1: Packet path from R1 to R7 using standard OSPF. Note that this path might become congested under heavy traffic, as standard OSPF does not consider real-time load.*
 
 ### TA-OSPF Routing (R1 to R7)
 
 *(Assuming a scenario where TA-OSPF avoids the congested path taken by standard OSPF and finds an alternate, less congested route)*
 
-![TA-OSPF Routing from R1 to R7](images/ta_ospf_r1_r7.png)
+![TA-OSPF Routing from R1 to R7](Images/ta_ospf_r1_r7.png)
 *Figure 2: Packet path from R1 to R7 using Traffic-Aware OSPF (TA-OSPF). TA-OSPF dynamically reroutes traffic away from congested links, selecting a path that might be longer but offers better performance by avoiding bottlenecks.*
 
 
