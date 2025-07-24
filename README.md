@@ -154,7 +154,7 @@ To illustrate the benefits of TA-OSPF, we compare typical packet paths from rout
 
 *(Assuming a scenario where TA-OSPF avoids the congested path taken by standard OSPF and finds an alternate, less congested route)*
 
-![TA-OSPF Routing from R1 to R7](Images/ta_ospf_r1_r7.png)
+![TA-OSPF Routing from R1 to R7](images/ta_ospf_r1_r7.png)
 *Figure 2: Packet path from R1 to R7 using Traffic-Aware OSPF (TA-OSPF). TA-OSPF dynamically reroutes traffic away from congested links, selecting a path that might be longer but offers better performance by avoiding bottlenecks.*
 
 
