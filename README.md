@@ -134,6 +134,25 @@ Each router maintains:
 - **Stable Convergence:** Periodic route updates and quadratic penalties maintain efficient and stable routing.
 
 
+## Visualizing Packet Routing
+
+To illustrate the benefits of TA-OSPF, we compare typical packet paths from router R1 to R7 under different network conditions for both standard OSPF and TA-OSPF. These images highlight how TA-OSPF dynamically adapts to traffic congestion to select more efficient routes.
+
+### Standard OSPF Routing (R1 to R7)
+
+*(Assuming a scenario where the "shortest path" for standard OSPF becomes congested)*
+
+![Standard OSPF Routing from R1 to R7](images/standard_ospf_r1_r7.png)
+*Figure 1: Packet path from R1 to R7 using standard OSPF. Note that this path might become congested under heavy traffic, as standard OSPF does not consider real-time load.*
+
+### TA-OSPF Routing (R1 to R7)
+
+*(Assuming a scenario where TA-OSPF avoids the congested path taken by standard OSPF and finds an alternate, less congested route)*
+
+![TA-OSPF Routing from R1 to R7](images/ta_ospf_r1_r7.png)
+*Figure 2: Packet path from R1 to R7 using Traffic-Aware OSPF (TA-OSPF). TA-OSPF dynamically reroutes traffic away from congested links, selecting a path that might be longer but offers better performance by avoiding bottlenecks.*
+
+
 ## References
 
 - Kurose, J. F., & Ross, K. W. (2020). *Computer Networking: A Top-Down Approach*.
