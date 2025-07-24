@@ -1,4 +1,4 @@
-# TA-OSPF: Traffic-Aware OSPF Protocol for OMNeT++
+# TA-OSPF: Traffic-Aware OSPF Protocol
 
 Welcome to the implementation of **Traffic-Aware OSPF (TA-OSPF)**—an innovative extension of the standard OSPF protocol designed for OMNeT++. This project integrates dynamic, traffic-based metrics into OSPF to enable intelligent, adaptive data routing in networks with fluctuating traffic loads.
 
