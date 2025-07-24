@@ -100,11 +100,12 @@ TA-OSPF-Project/
 │   ├── OSPFRouter.h         # Router module header
 │   ├── OSPFRouter.cc        # Router module implementation
 │   └── OSPFPacket.msg       # Custom packet format (TA-OSPF)
-│
-├── simulations/
 │   └── OSPFNetwork.ned      # Simulated network topology
+│   └── OSPFRouter.ned       # Simulated router topology
+├── simulations/
+│   └── omnetpp.ini      # network simulation .ini file
 │
-├── images/                  # Visualization images (e.g., routing paths)
+├── Images/                  # Visualization images (e.g., routing paths)
 │   ├── standard_ospf_r1_r7.png
 │   └── ta_ospf_r1_r7.png
 │
